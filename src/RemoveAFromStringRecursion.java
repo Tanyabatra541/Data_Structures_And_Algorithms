@@ -1,19 +1,18 @@
 public class RemoveAFromStringRecursion {
   public static void main(String[] args) {
     String s = "baccad";
-    remove(s, "");
+    System.out.println(remove(s));
   }
 
-  static void remove(String s, String ans) {
+  static String remove(String s) {
     if (s.isEmpty()) {
-      System.out.println(ans);
-      return;
+      return "";
     }
     char ch = s.charAt(0);
     if (ch == 'a') {
-      remove(s.substring(1), ans);
+      return remove(s.substring(1));
     } else {
-      remove(s.substring(1), ans + ch);
+      return ch + remove(s.substring(1));
     }
   }
 }
