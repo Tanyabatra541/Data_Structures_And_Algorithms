@@ -78,4 +78,32 @@ public class DLL {
     }
   }
 
+  public int deleteFirst() {
+    int val = head.value;
+    head = head.next;
+    head.prev = null;
+    return val;
+  }
+
+  public int deleteLast() {
+    Node last = head;
+    while(last.next!=null){
+      last = last.next;
+    }
+    int val = last.value;
+    last.prev.next = null;
+    return val;
+  }
+
+  public int delete(int index) {
+    Node toBeDeleted = head;
+    for(int i=1;i<=index;i++){
+      toBeDeleted = toBeDeleted.next;
+    }
+    int val = toBeDeleted.value;
+    toBeDeleted.prev.next = toBeDeleted.next;
+    toBeDeleted.next.prev = toBeDeleted.prev;
+    return val;
+  }
+
 }
