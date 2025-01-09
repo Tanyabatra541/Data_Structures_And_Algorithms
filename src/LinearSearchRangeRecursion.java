@@ -10,6 +10,8 @@ public class LinearSearchRangeRecursion {
     arr.add(9);
     arr.add(10);
     System.out.println(search2(arr, 6, 0));
+
+
   }
 
   static ArrayList<Integer> search(ArrayList<Integer> arr, int target, int i, ArrayList<Integer> ans){
