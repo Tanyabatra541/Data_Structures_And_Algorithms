@@ -7,6 +7,7 @@ public class FibonacciSeriesRecursion {
     int n=1;
     fib(a,b, n);
   }
+  
   static void fib(int a, int b, int n){
     if(n==7){
       return;
